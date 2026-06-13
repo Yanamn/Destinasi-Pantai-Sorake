@@ -1,0 +1,140 @@
+<!-- HALAMAN 4 / LOKASI -->
+
+<section class="page" id="lokasi">
+
+    <!-- BODY PERSEGI PANJANG -->
+    <div class="lokasi-body">
+
+        <h2>Lokasi Pantai Sorake</h2>
+
+        <p>
+            Tekan tombol di bawah untuk membuka lokasi
+            Pantai Sorake langsung di Google Maps.
+        </p>
+
+        <!-- TOMBOL MAPS -->
+        <a     href="https://www.google.com/maps/search/?api=1&query=Pantai+Sorake+Nias+Selatan+Sumatera+Utara""
+           target="_blank"
+           class="maps-btn">
+           Buka Google Maps
+        </a>
+    </div>
+
+    <!-- TOMBOL KEMBALI -->
+    <a href="index.html" class="btn-kembali">
+        Beranda
+    </a>
+
+</section>
+
+<style>
+
+/* LATAR HALAMAN */
+#lokasi{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+}
+
+/* BODY PERSEGI PANJANG */
+.lokasi-body{
+
+    width:75%;
+
+    max-width:600px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* JUDUL */
+.lokasi-body h2{
+
+    color:#0077b6;
+
+    margin-bottom:25px;
+}
+
+/* PARAGRAF */
+.lokasi-body p{
+
+    color:black;
+
+    margin-bottom:30px;
+
+    line-height:1.8;
+}
+
+/* TOMBOL MAPS */
+.maps-btn{
+
+    text-decoration:none;
+
+    background:#00b4d8;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    display:inline-block;
+
+    transition:0.3s;
+}
+
+/* EFEK */
+.maps-btn:hover{
+
+    background:#0077b6;
+
+    transform:scale(1.05);
+}
+
+/* TOMBOL KEMBALI */
+.btn-kembali{
+
+    margin-top:30px;
+
+    text-decoration:none;
+
+    background:#0077b6;
+
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    transition:0.3s;
+}
+
+/* EFEK */
+.btn-kembali:hover{
+
+    background:#023e8a;
+}
+
+</style>

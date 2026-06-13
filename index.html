@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinasi Pantai Sorake</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:"Times New Roman", serif;
+    }
+
+    body{
+      background-image:
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      min-height:100vh;
+    }
+
+    .overlay{
+      background:rgba(0,0,0,0.35);
+      min-height:100vh;
+      padding-top:40px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    /* JUDUL */
+
+    .judul{
+      width:280px;
+      background:rgba(255,255,255,0.35);
+      border-radius:35px;
+      padding:25px;
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .judul h1{
+      color:white;
+      font-size:34px;
+      line-height:1.2;
+    }
+
+    /* TOMBOL */
+
+    .menu{
+      width:85%;
+      max-width:300px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .menu a{
+      text-decoration:none;
+    }
+
+    .btn{
+      background:#08b8e8;
+      color:white;
+      padding:20px;
+      border-radius:30px;
+      text-align:center;
+      font-size:24px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#0196c1;
+    }
+
+    /* tombol pertama lebih gelap */
+
+    
+    /* rating */
+
+    .rating{
+      margin-top:50px;
+      text-align:center;
+      color:white;
+    }
+
+    .rating h2{
+      font-size:20px;
+      margin-bottom:10px;
+    }
+
+    /* rating */
+
+.rating{
+  margin-top:50px;
+  text-align:center;
+  color:white;
+}
+
+.rating h2{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.bintang{
+  font-size:40px;
+}
+
+.bintang span{
+  cursor:pointer;
+  color:white;
+  margin:0 3px;
+}
+
+.bintang span.aktif{
+  color:gold;
+}
+    
+    /* footer bawah */
+
+    .footer-box{
+      width:100%; background:rgba(255,255,255,0.35);
+      margin-top:60px;
+      padding:30px;
+      border-radius:35px 35px 0 0;
+      text-align:center;
+      color:white;
+      font-size:18px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay">
+
+    <!-- JUDUL -->
+
+    <div class="judul">
+      <h1>
+        DESTINASI <br>
+        PANTAI <br>
+        SORAKE
+      </h1>
+    </div>
+
+    <!-- MENU -->
+
+    <div class="menu">
+
+      <a href="legenda.html">
+        <div class="btn">Legenda</div>
+      </a>
+
+      <a href="galeri.html">
+        <div class="btn">Galeri</div>
+      </a>
+
+      <a href="lokasi.html">
+        <div class="btn">Lokasi</div>
+      </a>
+
+      <a href="keunggulan.html">
+        <div class="btn">
+          Keunggulan &<br>
+          Pemanfaatan
+        </div>
+      </a>
+
+    </div>
+
+    <!-- RATING -->
+
+   <div class="rating">
+  <h2>Rating Pengunjung</h2>
+
+  <div class="bintang">
+    <span onclick="beriRating(1)">★</span>
+    <span onclick="beriRating(2)">★</span>
+    <span onclick="beriRating(3)">★</span>
+    <span onclick="beriRating(4)">★</span>
+    <span onclick="beriRating(5)">★</span>
+  </div>
+
+  <p id="nilai-rating">Belum ada rating</p>
+</div>
+
+    <!-- FOOTER -->
+
+    <div class="footer-box">
+      Selamat datang di Destinasi Pantai Sorake.  
+      Nikmati keindahan ombak, pasir pantai, dan suasana alam yang mempesona.
+    </div>
+
+  </div>
+
+<script>
+
+function beriRating(nilai){
+
+  let bintang =
+  document.querySelectorAll('.bintang span');
+
+  bintang.forEach((item,index)=>{
+
+    if(index < nilai){
+      item.classList.add('aktif');
+    }
+
+    else{
+      item.classList.remove('aktif');
+    }
+
+  });
+
+  document.getElementById('nilai-rating')
+  .innerHTML = "Rating: " + nilai + " / 5";
+
+}
+
+</script>
+
+</body>
+</html>
